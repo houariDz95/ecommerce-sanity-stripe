@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
-import Link from "next/Link";
-import {AiOutlineMinus, AiOutlinePlus, AiOutlineLleft, AiOutlineShopping, AiOutlineLeft, onRemove} from 'react-icons/ai';
+import Link from "next/link";
+import {AiOutlineMinus, AiOutlinePlus, AiOutlineShopping, AiOutlineLeft } from 'react-icons/ai';
 import { TiDeleteOutline} from 'react-icons/ti';
 import toast from 'react-hot-toast';
 import {useStateContext} from '../context/StateContext';
@@ -51,7 +51,7 @@ const Cart = () => {
           <div className="product-container">
             {cartItems.length >= 1 && cartItems.map((item, index) => (
               <div className="product" key={item._id}>
-                <img src={urlFor(item?.image[0])} className="cart-product-image" />
+                <img src={urlFor(item?.image[0])} className="cart-product-image" alt="product"/>
                 <div className='item-desc'>
                   <div className='flex top'>
                     <h5>{item?.name}</h5>

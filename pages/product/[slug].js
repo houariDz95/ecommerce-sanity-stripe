@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-
 import { client,urlFor } from '../../lib/clinet';
 import { Product } from '../../components';
 import { useStateContext }  from '../../context/StateContext';
@@ -28,6 +27,7 @@ const ProductDetails = ({ product, products }) => {
                 className={i === index ? 'small-image selected-image' : 'small-image '}
                 onMouseEnter={() => setIndex(i)}
                 key={i}
+                alt=""
               />
             ))}
             </div>
